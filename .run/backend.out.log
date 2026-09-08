@@ -1,0 +1,227 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.fitverse:fitverse-backend >--------------------
+[INFO] Building Fitverse Backend 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.4:run (default-cli) > test-compile @ fitverse-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ fitverse-backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ fitverse-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ fitverse-backend ---
+[INFO] skip non existing resourceDirectory C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ fitverse-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.4:run (default-cli) < test-compile @ fitverse-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.4:run (default-cli) @ fitverse-backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-08-22T02:37:15.733+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Starting FitverseApplication using Java 21.0.3 with PID 14144 (C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend\target\classes started by ASUS in C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend)
+2026-08-22T02:37:15.736+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-22T02:37:15.789+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-22T02:37:15.790+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-22T02:37:16.723+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-22T02:37:16.883+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 16 JPA repository interfaces.
+2026-08-22T02:37:17.610+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-22T02:37:17.628+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22T02:37:17.629+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-08-22T02:37:17.688+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22T02:37:17.689+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1897 ms
+2026-08-22T02:37:17.866+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-22T02:37:17.928+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-22T02:37:17.963+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-22T02:37:18.260+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-22T02:37:18.295+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-22T02:37:18.477+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cb054aa
+2026-08-22T02:37:18.480+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-22T02:37:18.534+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-22T02:37:19.960+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-22T02:37:20.391+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:37:21.127+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-08-22T02:37:21.925+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-08-22T02:37:21.966+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-08-22T02:37:21.974+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Started FitverseApplication in 6.725 seconds (process running for 7.275)
+2026-08-22T02:38:02.023+05:30  INFO 14144 --- [fitverse-backend] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-22T02:38:02.024+05:30  INFO 14144 --- [fitverse-backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-22T02:38:02.026+05:30  INFO 14144 --- [fitverse-backend] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-22T02:38:02.276+05:30  WARN 14144 --- [fitverse-backend] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.fitverse.dto.common.ApiResponse<com.fitverse.dto.auth.AuthResponse>> com.fitverse.controller.AuthController.login(com.fitverse.dto.auth.LoginRequest) with 2 errors: [Field error in object 'loginRequest' on field 'email': rejected value [null]; codes [NotBlank.loginRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.email,email]; arguments []; default message [email]]; default message [Email is required]] [Field error in object 'loginRequest' on field 'password': rejected value [null]; codes [NotBlank.loginRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password]]; default message [Password is required]] ]
+2026-08-22T02:50:22.240+05:30  INFO 14144 --- [fitverse-backend] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-22T02:50:22.254+05:30  INFO 14144 --- [fitverse-backend] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:50:22.258+05:30  INFO 14144 --- [fitverse-backend] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-22T02:50:22.266+05:30  INFO 14144 --- [fitverse-backend] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-08-22T02:50:22.356+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Starting FitverseApplication using Java 21.0.3 with PID 14144 (C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend\target\classes started by ASUS in C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend)
+2026-08-22T02:50:22.356+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-22T02:50:22.894+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-22T02:50:23.035+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139 ms. Found 16 JPA repository interfaces.
+2026-08-22T02:50:23.292+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-22T02:50:23.295+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22T02:50:23.297+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-08-22T02:50:23.327+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22T02:50:23.328+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 968 ms
+2026-08-22T02:50:23.435+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-22T02:50:23.441+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-22T02:50:23.462+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-22T02:50:23.465+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-08-22T02:50:23.472+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5380eecc
+2026-08-22T02:50:23.473+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-08-22T02:50:23.475+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-22T02:50:23.890+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-22T02:50:24.298+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:50:24.746+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-08-22T02:50:25.241+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-08-22T02:50:25.257+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-08-22T02:50:25.260+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Started FitverseApplication in 2.936 seconds (process running for 790.561)
+2026-08-22T02:50:25.331+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-22T02:50:27.243+05:30  INFO 14144 --- [fitverse-backend] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 157 class path changes (0 additions, 0 deletions, 157 modifications)
+2026-08-22T02:50:27.253+05:30  INFO 14144 --- [fitverse-backend] [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:50:27.254+05:30  INFO 14144 --- [fitverse-backend] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-08-22T02:50:27.256+05:30  INFO 14144 --- [fitverse-backend] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-08-22T02:50:27.356+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Starting FitverseApplication using Java 21.0.3 with PID 14144 (C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend\target\classes started by ASUS in C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend)
+2026-08-22T02:50:27.357+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-22T02:50:27.663+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-22T02:50:27.748+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 16 JPA repository interfaces.
+2026-08-22T02:50:27.905+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-22T02:50:27.906+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22T02:50:27.907+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-08-22T02:50:27.930+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22T02:50:27.930+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+2026-08-22T02:50:27.991+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-22T02:50:27.994+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-22T02:50:28.004+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-22T02:50:28.005+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-08-22T02:50:28.009+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e624e34
+2026-08-22T02:50:28.010+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-08-22T02:50:28.012+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-22T02:50:28.306+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-22T02:50:28.744+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:50:29.158+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-08-22T02:50:29.573+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-08-22T02:50:29.590+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-08-22T02:50:29.594+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Started FitverseApplication in 2.266 seconds (process running for 794.893)
+2026-08-22T02:50:29.640+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-22T02:51:32.070+05:30  INFO 14144 --- [fitverse-backend] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-22T02:51:32.080+05:30  INFO 14144 --- [fitverse-backend] [      Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:51:32.081+05:30  INFO 14144 --- [fitverse-backend] [      Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-08-22T02:51:32.083+05:30  INFO 14144 --- [fitverse-backend] [      Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-08-22T02:51:32.164+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Starting FitverseApplication using Java 21.0.3 with PID 14144 (C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend\target\classes started by ASUS in C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend)
+2026-08-22T02:51:32.164+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-22T02:51:32.405+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-22T02:51:32.471+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 16 JPA repository interfaces.
+2026-08-22T02:51:32.576+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-08-22T02:51:32.577+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22T02:51:32.577+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-08-22T02:51:32.597+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22T02:51:32.598+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 432 ms
+2026-08-22T02:51:32.647+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-22T02:51:32.649+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-22T02:51:32.657+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-22T02:51:32.658+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-08-22T02:51:32.662+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@141828f7
+2026-08-22T02:51:32.662+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-08-22T02:51:32.664+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-22T02:51:32.913+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-22T02:51:33.168+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:51:33.441+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-08-22T02:51:33.755+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-08-22T02:51:33.769+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-08-22T02:51:33.772+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Started FitverseApplication in 1.635 seconds (process running for 859.072)
+2026-08-22T02:51:33.808+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-22T02:53:09.351+05:30  INFO 14144 --- [fitverse-backend] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-22T02:53:09.360+05:30  INFO 14144 --- [fitverse-backend] [      Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:53:09.361+05:30  INFO 14144 --- [fitverse-backend] [      Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-08-22T02:53:09.364+05:30  INFO 14144 --- [fitverse-backend] [      Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-08-22T02:53:09.444+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Starting FitverseApplication using Java 21.0.3 with PID 14144 (C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend\target\classes started by ASUS in C:\Users\ASUS\Documents\SPRING BOOT NOTES\java\FitVerse\backend)
+2026-08-22T02:53:09.444+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-22T02:53:09.709+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-22T02:53:09.778+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 16 JPA repository interfaces.
+2026-08-22T02:53:09.898+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-22T02:53:09.899+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22T02:53:09.900+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-08-22T02:53:09.919+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-22T02:53:09.919+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 473 ms
+2026-08-22T02:53:09.973+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-22T02:53:09.976+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-22T02:53:09.986+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-22T02:53:09.988+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-08-22T02:53:09.993+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6697d075
+2026-08-22T02:53:09.993+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-08-22T02:53:09.996+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-22T02:53:10.294+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-22T02:53:10.619+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T02:53:10.958+05:30  WARN 14144 --- [fitverse-backend] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-08-22T02:53:11.392+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-08-22T02:53:11.409+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-08-22T02:53:11.412+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] com.fitverse.FitverseApplication         : Started FitverseApplication in 1.992 seconds (process running for 956.712)
+2026-08-22T02:53:11.467+05:30  INFO 14144 --- [fitverse-backend] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16:12 min
+[INFO] Finished at: 2026-08-22T02:53:24+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.4:run (default-cli) on project fitverse-backend: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
