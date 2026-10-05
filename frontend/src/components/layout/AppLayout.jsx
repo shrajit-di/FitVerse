@@ -35,16 +35,36 @@ export const AppLayout = ({ children }) => {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
-  const navItems = [
-    { label: 'Home', path: '/dashboard', icon: Home },
-    { label: 'Assessments', path: '/assessments', icon: ClipboardCheck },
-    { label: 'Workout', path: '/workout', icon: Dumbbell },
-    { label: 'Nutrition', path: '/nutrition', icon: Utensils },
-    { label: 'AI Coach', path: '/ai-coach', icon: Bot, badge: 'AI' },
-    { label: 'Gym Finder', path: '/gym-finder', icon: MapPin },
-    { label: 'Shop', path: '/shop', icon: ShoppingBag },
-    { label: 'Mental Wellness', path: '/mental', icon: Brain },
-    { label: 'Community', path: '/community', icon: Users },
+  const navGroups = [
+    {
+      title: 'MAIN',
+      items: [
+        { label: 'Home', path: '/dashboard', icon: Home },
+        { label: 'AI Coach', path: '/ai-coach', icon: Bot, badge: 'AI' },
+      ]
+    },
+    {
+      title: 'PHYSICAL FITNESS',
+      items: [
+        { label: 'Overview & Workout', path: '/physical', icon: Dumbbell },
+        { label: 'Nutrition & Diet', path: '/nutrition', icon: Utensils },
+        { label: 'Gym Finder', path: '/gym-finder', icon: MapPin },
+      ]
+    },
+    {
+      title: 'MENTAL FITNESS',
+      items: [
+        { label: 'Overview & Journal', path: '/mental', icon: Brain },
+        { label: 'Assessments', path: '/assessments', icon: ClipboardCheck },
+      ]
+    },
+    {
+      title: 'ECOSYSTEM',
+      items: [
+        { label: 'Shop', path: '/shop', icon: ShoppingBag },
+        { label: 'Community', path: '/community', icon: Users },
+      ]
+    }
   ];
 
   const handleLogout = () => {
@@ -57,57 +77,64 @@ export const AppLayout = ({ children }) => {
   return (
     <div className="h-screen w-screen overflow-hidden bg-[var(--bg-page)] text-[var(--text-primary)] flex transition-colors duration-200 font-sans">
       
-      {/* 1. LEFT SIDEBAR (DARK OBSIDIAN / CHARCOAL MATCHING COLLAGE) */}
-      <aside className="w-64 h-screen bg-[#0d1117] border-r border-slate-800 flex flex-col justify-between p-4 shrink-0 hidden md:flex overflow-y-auto z-30 select-none">
+      {/* 1. LEFT SIDEBAR */}
+      <aside className="w-64 h-screen bg-[var(--bg-sidebar)] border-r border-[var(--border-main)] flex flex-col justify-between p-4 shrink-0 hidden md:flex overflow-y-auto z-30 select-none custom-scrollbar">
         <div>
           {/* Brand Logo with Green Circle */}
           <Link to="/dashboard" className="flex items-center gap-3 px-3 py-3 mb-5 group">
             <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-105 transition">
               <span className="text-slate-950 font-black text-sm">✦</span>
             </div>
-            <span className="text-xl font-black tracking-tight text-white flex items-center gap-1">
+            <span className="text-xl font-black tracking-tight text-[var(--text-primary)] flex items-center gap-1">
               Fitverse
             </span>
           </Link>
 
           {/* Main Navigation Links */}
-          <nav className="space-y-1.5">
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = location.pathname === item.path || (item.path === '/dashboard' && location.pathname === '/');
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold transition duration-150 ${
-                    isActive
-                      ? 'bg-[#059669] text-white shadow-md shadow-emerald-900/40 font-extrabold'
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                    <span>{item.label}</span>
-                  </div>
-                  {item.badge && (
-                    <span className="text-[10px] uppercase font-bold bg-emerald-400/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-400/30">
-                      {item.badge}
-                    </span>
-                  )}
-                </Link>
-              );
-            })}
+          <nav className="space-y-5">
+            {navGroups.map((group, idx) => (
+              <div key={idx} className="space-y-1.5">
+                <h3 className="px-3.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+                  {group.title}
+                </h3>
+                {group.items.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = location.pathname === item.path || (item.path === '/dashboard' && location.pathname === '/');
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-bold transition duration-150 ${
+                        isActive
+                          ? 'bg-[#059669] text-white shadow-md shadow-emerald-900/40 font-extrabold'
+                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card-nested)]'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-[var(--text-secondary)]'}`} />
+                        <span>{item.label}</span>
+                      </div>
+                      {item.badge && (
+                        <span className="text-[10px] uppercase font-bold bg-emerald-400/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-400/30">
+                          {item.badge}
+                        </span>
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+            ))}
           </nav>
         </div>
 
         {/* Bottom Section (Settings & Logout) */}
-        <div className="pt-4 border-t border-slate-800/80 space-y-1">
+        <div className="pt-4 border-t border-[var(--border-main)] space-y-1">
           <Link
             to="/settings"
             className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition ${
               location.pathname === '/settings'
                 ? 'bg-[#059669] text-white'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card-nested)]'
             }`}
           >
             <Settings className="w-4 h-4" />
@@ -116,7 +143,7 @@ export const AppLayout = ({ children }) => {
 
           <button
             onClick={handleLogout}
-            className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-400 hover:text-rose-400 hover:bg-rose-950/20 transition cursor-pointer"
+            className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-[var(--text-secondary)] hover:text-rose-500 hover:bg-rose-500/10 transition cursor-pointer"
           >
             <LogOut className="w-4 h-4" />
             <span>Logout</span>
@@ -239,52 +266,59 @@ export const AppLayout = ({ children }) => {
             onClick={() => setMobileSidebarOpen(false)}
             className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm"
           />
-          <aside className="relative w-64 max-w-[80vw] h-full bg-[#0d1117] border-r border-slate-800 flex flex-col justify-between p-4 z-10 overflow-y-auto">
+          <aside className="relative w-64 max-w-[80vw] h-full bg-[var(--bg-sidebar)] border-r border-[var(--border-main)] flex flex-col justify-between p-4 z-10 overflow-y-auto">
             <div>
               <div className="flex items-center justify-between mb-5">
                 <Link to="/dashboard" onClick={() => setMobileSidebarOpen(false)} className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-slate-950 font-black text-sm">
                     ✦
                   </div>
-                  <span className="text-lg font-black text-white">
+                  <span className="text-lg font-black text-[var(--text-primary)]">
                     Fitverse
                   </span>
                 </Link>
                 <button
                   onClick={() => setMobileSidebarOpen(false)}
-                  className="p-1.5 rounded-lg bg-slate-800 text-slate-400"
+                  className="p-1.5 rounded-lg bg-[var(--bg-card-nested)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-main)]"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
 
-              <nav className="space-y-1.5">
-                {navItems.map((item) => {
-                  const Icon = item.icon;
-                  const isActive = location.pathname === item.path;
-                  return (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      onClick={() => setMobileSidebarOpen(false)}
-                      className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold ${
-                        isActive
-                          ? 'bg-[#059669] text-white font-extrabold'
-                          : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <Icon className="w-4 h-4" />
-                        <span>{item.label}</span>
-                      </div>
-                      {item.badge && (
-                        <span className="text-[10px] bg-emerald-400/20 text-emerald-300 px-2 py-0.5 rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
-                    </Link>
-                  );
-                })}
+              <nav className="space-y-5">
+                {navGroups.map((group, idx) => (
+                  <div key={idx} className="space-y-1.5">
+                    <h3 className="px-3.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500 mb-1.5">
+                      {group.title}
+                    </h3>
+                    {group.items.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = location.pathname === item.path || (item.path === '/dashboard' && location.pathname === '/');
+                      return (
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          onClick={() => setMobileSidebarOpen(false)}
+                          className={`flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold ${
+                            isActive
+                              ? 'bg-[#059669] text-white font-extrabold'
+                              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card-nested)]'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-[var(--text-secondary)]'}`} />
+                            <span>{item.label}</span>
+                          </div>
+                          {item.badge && (
+                            <span className="text-[10px] bg-emerald-400/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-400/30">
+                              {item.badge}
+                            </span>
+                          )}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                ))}
               </nav>
             </div>
           </aside>

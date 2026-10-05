@@ -1,35 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --bg-page: #f8fafc;
-  --bg-sidebar: #0d1117;
-  --bg-header: rgba(255, 255, 255, 0.90);
-  --bg-card: #ffffff;
-  --bg-card-nested: #f1f5f9;
-  --bg-card-hover: #f8fafc;
-  --border-main: #e2e8f0;
-  --border-subtle: #cbd5e1;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --input-bg: #f1f5f9;
-  --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
-}
+@layer base {
+  :root {
+    --bg-page: #f8fafc;
+    --bg-sidebar: #ffffff;
+    --bg-header: rgba(255, 255, 255, 0.90);
+    --bg-card: #ffffff;
+    --bg-card-nested: #f1f5f9;
+    --bg-card-hover: #f8fafc;
+    --border-main: #e2e8f0;
+    --border-subtle: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --input-bg: #f1f5f9;
+    --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+  }
 
-.dark {
-  --bg-page: #070817;
-  --bg-sidebar: #0d1117;
-  --bg-header: rgba(13, 17, 23, 0.85);
-  --bg-card: #12142e;
-  --bg-card-nested: #0a0b1c;
-  --bg-card-hover: #17193b;
-  --border-main: #1f234d;
-  --border-subtle: #2b3064;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --input-bg: #12142e;
-  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  .dark {
+    --bg-page: #070817;
+    --bg-sidebar: #090a1c;
+    --bg-header: rgba(9, 10, 28, 0.85);
+    --bg-card: #12142e;
+    --bg-card-nested: #0a0b1c;
+    --bg-card-hover: #17193b;
+    --border-main: #1f234d;
+    --border-subtle: #2b3064;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --input-bg: #12142e;
+    --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  }
 }
 
 body {
@@ -86,8 +88,8 @@ body {
 
 .fit-card-hover:hover {
   transform: translateY(-2px);
-  border-color: #059669;
-  box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.15);
+  border-color: #6366f1;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.15);
 }
 
 .fit-input {
@@ -129,10 +131,10 @@ body {
 /* Glowing pulse for active mic */
 @keyframes micGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(5, 150, 105, 0.4), 0 0 30px rgba(5, 150, 105, 0.2);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4), 0 0 30px rgba(99, 102, 241, 0.2);
   }
   50% {
-    box-shadow: 0 0 25px rgba(5, 150, 105, 0.8), 0 0 50px rgba(5, 150, 105, 0.5);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.8), 0 0 50px rgba(99, 102, 241, 0.5);
   }
 }
 

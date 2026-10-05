@@ -10,8 +10,7 @@ import { RegisterPage } from './pages/RegisterPage';
 import { OnboardingPage } from './pages/OnboardingPage';
 
 import { DashboardPage } from './pages/DashboardPage';
-import { AssessmentsPage } from './pages/AssessmentsPage';
-import { WorkoutPage } from './pages/WorkoutPage';
+import { PhysicalFitnessPage } from './pages/PhysicalFitnessPage';
 import { NutritionPage } from './pages/NutritionPage';
 import { AICoachPage } from './pages/AICoachPage';
 import { GymFinderPage } from './pages/GymFinderPage';
@@ -37,9 +36,9 @@ export function App() {
             <Route element={<ProtectedRoute />}>
               <Route path="/onboarding" element={<OnboardingPage />} />
               <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/assessments" element={<AssessmentsPage />} />
-              <Route path="/workout" element={<WorkoutPage />} />
-              <Route path="/physical" element={<WorkoutPage />} />
+              <Route path="/assessments" element={<DashboardPage />} />
+              <Route path="/workout" element={<PhysicalFitnessPage />} />
+              <Route path="/physical" element={<PhysicalFitnessPage />} />
               <Route path="/nutrition" element={<NutritionPage />} />
               <Route path="/ai-coach" element={<AICoachPage />} />
               <Route path="/gym-finder" element={<GymFinderPage />} />
