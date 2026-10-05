@@ -1,48 +1,63 @@
 import React from 'react';
 import { AppLayout } from '../components/layout/AppLayout';
-import { Users, MessageCircle, Heart } from 'lucide-react';
+import { Users, Award, Flame, MessageSquare, Heart, Share2 } from 'lucide-react';
 
 export const CommunityPage = () => {
-  const posts = [
-    { author: 'Rahul K.', role: 'Fitness Member', text: 'Hit 80kg bench press today after 2 months of progressive overload! Consistent sleep made a huge difference.', likes: 24, replies: 6, tag: 'Progress' },
-    { author: 'Dr. Sneha M.', role: 'Mindfulness Coach', text: 'Friendly reminder: 5 minutes of box breathing between study/work blocks reduces cognitive fatigue by up to 35%.', likes: 58, replies: 12, tag: 'Wellness Tip' }
+  const leaderboards = [
+    { rank: 1, name: 'Aarav Mehta', streak: 42, score: 94, avatar: 'A' },
+    { rank: 2, name: 'Shrajit Vishwakarma', streak: 14, score: 86, avatar: 'S' },
+    { rank: 3, name: 'Neha Sharma', streak: 12, score: 84, avatar: 'N' },
   ];
 
   return (
     <AppLayout>
-      <div className="space-y-6">
+      <div className="space-y-6 pb-12">
         <div>
-          <h1 className="text-2xl font-black text-white flex items-center gap-2">
-            <Users className="w-7 h-7 text-indigo-400" />
+          <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
             Fitverse Community
           </h1>
-          <p className="text-xs text-slate-400">Share milestones, discuss workouts, and connect with wellness peers.</p>
+          <p className="text-xs text-[var(--text-secondary)] mt-0.5">
+            Connect with like-minded athletes, join monthly challenges, and climb leaderboards.
+          </p>
         </div>
 
-        <div className="space-y-4 max-w-2xl">
-          {posts.map((p, i) => (
-            <div key={i} className="fit-card p-5 rounded-3xl space-y-3">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-purple-500/20 text-purple-300 font-bold flex items-center justify-center text-xs">
-                    {p.author[0]}
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-white">{p.author}</h4>
-                    <p className="text-[10px] text-slate-400">{p.role}</p>
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 fit-card p-6 rounded-3xl space-y-4">
+            <h3 className="text-sm font-black text-[var(--text-primary)]">Community Feed</h3>
+            
+            <div className="p-4 rounded-2xl bg-[var(--bg-card-nested)] border border-[var(--border-main)] space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-xs text-slate-950">
+                  A
                 </div>
-                <span className="text-[10px] font-bold text-indigo-300 bg-indigo-950 px-2 py-0.5 rounded">
-                  {p.tag}
-                </span>
+                <div>
+                  <p className="text-xs font-bold text-[var(--text-primary)]">Aarav Mehta</p>
+                  <p className="text-[10px] text-slate-400">2 hours ago • Upper Body HIIT</p>
+                </div>
               </div>
-              <p className="text-xs text-slate-200 leading-relaxed">{p.text}</p>
-              <div className="flex items-center gap-4 text-xs text-slate-400 pt-2 border-t border-[#1f234d]">
-                <button className="flex items-center gap-1 hover:text-rose-400 cursor-pointer"><Heart className="w-3.5 h-3.5" /> {p.likes}</button>
-                <button className="flex items-center gap-1 hover:text-indigo-400 cursor-pointer"><MessageCircle className="w-3.5 h-3.5" /> {p.replies}</button>
-              </div>
+              <p className="text-xs text-[var(--text-primary)]">
+                Hit a new PR on the Barbell Bench Press today: 90kg for 6 reps! Keep crushing your goals everyone! 🔥
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="fit-card p-6 rounded-3xl space-y-4">
+            <h3 className="text-sm font-black text-[var(--text-primary)]">Weekly Streak Leaderboard</h3>
+            <div className="space-y-2">
+              {leaderboards.map((l) => (
+                <div key={l.rank} className="p-3 rounded-2xl bg-[var(--bg-card-nested)] border border-[var(--border-main)] flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs font-black text-emerald-500">#{l.rank}</span>
+                    <div className="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center text-xs font-bold">
+                      {l.avatar}
+                    </div>
+                    <span className="text-xs font-bold text-[var(--text-primary)]">{l.name}</span>
+                  </div>
+                  <span className="text-xs font-black text-rose-500">🔥 {l.streak}d</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </AppLayout>
